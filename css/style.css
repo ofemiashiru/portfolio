@@ -1,1 +1,594 @@
+body{
+  margin:0;
+  font-family: 'Merriweather', serif;
+  color:#333;
+}
 
+h1{
+  font-weight: 700;
+  font-size: 3.2rem;
+  margin: 0;
+}
+
+h2{
+  margin:0 0 10px 0;
+}
+
+h3{
+  font-weight: 700;
+  margin:0;
+}
+
+p{
+  line-height: 2;
+  margin:0 0 10px;
+}
+
+span{
+  display: inline;
+}
+
+hr{
+  width: auto;
+  border-bottom: 1px solid #333;
+  border-top: none;
+  /* border-bottom: 5px dotted #333;
+  border-top: none; */
+}
+
+/* Navigation */
+
+nav > ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height:auto;
+}
+
+nav > ul > li{
+  display: inline-block;
+}
+
+nav > ul > li > a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav > ul > li > a:hover{
+  cursor:pointer;
+  color: #DE5D82;
+  opacity: .5;
+  transition: 0.4s;
+}
+
+.burger-menu{
+  color: #FFF;
+  font-size: 2.3rem;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+.burger-menu:hover{
+  cursor: pointer;
+  color: #DE5D82;
+  opacity: .5;
+  transition: 0.4s;
+}
+
+img{
+  margin:0;
+}
+
+
+/* All Pages */
+
+.about{
+  height: 100%;
+  width: 100%;
+  position:fixed;
+  z-index: 99;
+  top: 1;
+  left: 0;
+  background-color: #FFF;
+  overflow-x: hidden;
+  transition: 0.7s;
+  padding-top: 80px;
+  opacity: 1;
+}
+
+.projects, .education, .skills, .interests{
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 1;
+  left: 0;
+  background-color: #FFF;
+  overflow-x: hidden;
+  transition: 0.7s;
+  padding-top: 80px;
+  opacity: 0;
+
+}
+
+/* About Page */
+
+.profile{
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-left{
+  flex: 50%;
+  text-align: right;
+  padding-top: 10px;
+
+}
+.profile-right{
+  /* background-color: #FFF; */
+  padding:0 20px;
+  flex: 50%;
+}
+
+.my-picture{
+  width:100%;
+  height: 420px;
+  object-fit:cover;
+  object-position: 50% 0;
+  border-top-right-radius:20px;
+  border-bottom-right-radius:20px;
+}
+
+.my-links {
+
+  list-style-type: none;
+  margin-top: 7px;
+  padding: 0;
+}
+
+.my-links > li {
+  display: inline-block;
+}
+
+.my-links > span{
+  margin: 0 5px;
+}
+
+.page-links{
+  display: inline-block;
+  text-decoration: none;
+  color: blue;
+}
+
+.page-links:hover{
+  color: #DE5D82;
+  opacity: .5;
+  transition: 0.4s;
+}
+
+/* Projects */
+
+.proj-display{
+  display: inline;
+}
+
+.proj-links{
+  display: inline;
+  margin-left: 10px;
+}
+
+.proj-links > li > a:hover {
+  cursor: pointer;
+}
+
+.project{
+  display: flex;
+  flex-direction: row;
+}
+
+.project-left{
+  flex: 50%;
+  padding-top: 10px;
+}
+
+.project-right{
+  padding:0 20px;
+  flex: 50%;
+}
+
+
+.project-container {
+  position: relative;
+  width: 100%;
+
+}
+
+.image {
+  opacity: 1;
+  /* display: block; */
+  width: 100%;
+  height:420px;
+
+  transition: .5s ease;
+  backface-visibility: hidden;
+  object-fit: cover;
+
+  border-right:1px solid rgba(51, 51, 51, .1);
+  border-top-right-radius:20px;
+  border-bottom-right-radius:20px;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.project-container:hover .image {
+  opacity: 0.3;
+}
+
+.project-container:hover .middle {
+  opacity: 1;
+  background-color: #333;
+  padding: 16px 32px;
+}
+
+.project-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.project-link:hover{
+  color: #DE5D82;
+  opacity: .5;
+  transition: 0.4s;
+}
+
+.cash-planner-app{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 1;
+  left: 0;
+  background-color: #FFF;
+  overflow-x: hidden;
+  transition: 0.7s;
+
+  opacity: 1;
+
+}
+
+
+.weather-app, .calculator, .to-do-list{
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 1;
+  left: 0;
+  background-color: #FFF;
+  overflow-x: hidden;
+  transition: 0.7s;
+  opacity: 0;
+}
+
+.weather-image{
+  border-top:1px solid rgba(51, 51, 51, .1);
+  border-bottom:1px solid rgba(51, 51, 51, .1);
+}
+
+.todo-image{
+  border-bottom:1px solid rgba(51, 51, 51, .1);
+}
+
+/* Education */
+
+.greenwich{
+  width: 100%;
+  height: 98%;
+  object-fit: cover;
+  border-top-right-radius:20px;
+  border-bottom-right-radius:20px;
+}
+
+
+/* Skills Page */
+
+.skills-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 50px;
+  margin-top: 20px
+
+}
+
+.skills-container > div{
+  text-align: center;
+}
+
+.html-image{
+  width: 48%;
+}
+
+.css-image{
+  width: 35%;
+}
+
+.js-image{
+  width: 43%;
+}
+
+.helper {
+    display: inline-block;
+    height: 80%;
+    vertical-align: middle;
+}
+
+.sql-image{
+  width:54%;
+  vertical-align: middle;
+}
+
+.node-image{
+  width: 49%;
+}
+
+.git-image{
+  width: 47%;
+}
+
+.bash-image{
+  width:54%;
+  vertical-align: middle;
+}
+
+.vscode-image{
+  width: 44%;
+}
+
+.java-image{
+  width: 24%;
+  margin:15px auto;
+}
+
+/* Interests Page */
+
+.interests-row{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 24%;
+  max-width: 24%;
+  padding: 0 4px;
+  transition: 0.4s;
+}
+
+.column > img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+.interests-container {
+  position: relative;
+  width: 100%;
+
+}
+
+.interests-image {
+  opacity: 1;
+  /* display: block; */
+  width: 100%;
+  height: 420px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  object-fit: contain;
+
+}
+
+.interests-middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.interests-container:hover .interests-image {
+  opacity: 0.3;
+}
+
+.interests-container:hover .interests-middle {
+  opacity: 1;
+  background-color: #333;
+  padding: 20px 46px;
+}
+
+.interests-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.interests-link:hover{
+  color: #DE5D82;
+  opacity: .5;
+  transition: 0.4s;
+}
+
+.music{
+  object-position: 0 0;
+}
+
+.open-menu{
+  height:100%;
+  transition: 0.4s;
+}
+
+@media only screen and (max-width: 1027px) {
+  /* For tablets */
+
+  .interests{
+    position: absolute;
+    padding-top: 20px;
+    transition: 0.4s;
+  }
+
+  .column {
+    flex: 40%;
+    max-width: 40%;
+    transition: 0.4s;
+    padding-bottom: 10px;
+  }
+
+  .cash-planner-app, .weather-app, .calculator, .to-do-list{
+    position: absolute;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  nav{
+
+  }
+
+  nav > ul{
+    text-align: center;
+    height:47px;
+  }
+
+  nav > ul > li{
+    display:block;
+  }
+
+  nav > ul > li > a {
+    display: inline-block;
+  }
+
+  .burger-menu{
+    display: inline-block;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    transition: 0.4s;
+  }
+
+  h2{
+    font-size: 1rem;
+  }
+
+  .about, .projects, .education, .skills, .interests{
+    position: absolute;
+    padding-top: 20px;
+    transition: 0.4s;
+  }
+
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-right{
+
+    margin: 0 20px 0 0 ;
+
+  }
+
+  .profile-left{
+    text-align: center;
+  }
+
+  .my-picture{
+    width:100%;
+    height: 90%;
+  }
+
+  .proj-display{
+    display: block;
+  }
+
+  .proj-links{
+    display: block;
+    margin: 0;
+    text-align: center;
+    font-size: .8rem;
+  }
+
+  .project-header{
+
+  }
+
+  .project {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-right {
+    border-bottom: 1px solid #333;
+  }
+
+  .cash-planner-app, .weather-app, .calculator, .to-do-list{
+    position: absolute;
+  }
+
+  .skills-small{
+    padding-top: 20px;
+  }
+
+  .skills-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    margin-left: 0px;
+    transition: 0.4s;
+  }
+
+  .greenwich, .my-picture, .image{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .image{
+    height: 310px;
+  }
+
+  .greenwich{
+    width: 120%;
+    object-position: -60px 0;
+  }
+
+  .column {
+    flex: 100%;
+    max-width: 100%;
+    transition: 0.4s;
+    padding-bottom: 10px;
+  }
+
+}
