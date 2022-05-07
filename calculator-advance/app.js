@@ -9,6 +9,10 @@ const currentOperandTextElement = document.querySelector('[data-current-operand]
 const percentButton = document.querySelector('[data-percent]');
 const posNegButton = document.querySelector('[data-posneg]');
 
+const now = new Date().getFullYear();
+const dateDisplay = document.querySelector('.date');
+dateDisplay.innerText = now;
+
 class Calculator {
   constructor(previousOperandTextElement, currentOperandTextElement) {
     this.previousOperandTextElement = previousOperandTextElement;
