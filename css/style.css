@@ -276,7 +276,7 @@ img{
 }
 
 
-.weather-app, .calculator, .to-do-list{
+.cash-planner-app, .weather-app, .calculator, .to-do-list{
   height: 0;
   width: 100%;
   position: fixed;
