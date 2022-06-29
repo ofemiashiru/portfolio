@@ -260,7 +260,7 @@ img{
   transition: 0.4s;
 }
 
-.cash-planner-starling-api{
+.cash-planner-starling-api {
   height: 100%;
   width: 100%;
   position: fixed;
@@ -289,7 +289,7 @@ img{
   opacity: 0;
 }
 
-.weather-image{
+.weather-image, .starling-api-image{
   border-top:1px solid rgba(51, 51, 51, .1);
   border-bottom:1px solid rgba(51, 51, 51, .1);
 }
