@@ -2,4 +2,4 @@
 
 ![Responsive Image of Portfolio](https://raw.githubusercontent.com/ofemiashiru/cv/main/responsive_portfolio.png)
 
-[Live Page](https://ofemiashiru.github.io/cv/)
+[Live Page](https://ofemiashiru.github.io/portfolio/){:target="_blank"}
