@@ -259,7 +259,7 @@ img{
   opacity: .5;
   transition: 0.4s;
 }
-
+/*
 .cp-starling-api {
   height: 100%;
   width: 100%;
@@ -274,9 +274,9 @@ img{
   opacity: 1;
 
 }
+*/
 
-
-.cash-planner-app, .weather-app, .calculator, .to-do-list{
+.cash-planner-app, .weather-app, .calculator, .to-do-list, .cp-starling-api {
   height: 0;
   width: 100%;
   position: fixed;
